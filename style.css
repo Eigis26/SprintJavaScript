@@ -67,3 +67,11 @@ input[type=button]:hover {
     float: right;
     margin-top: 0.5rem;
 }
+#done {
+    width: 5rem;
+    float: right;
+    margin-top: 0.5rem;
+}
+strike {
+    font-size: 3rem;
+}
