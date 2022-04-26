@@ -9,5 +9,10 @@ function addElement() {
 function display(){
     document.getElementById("list").innerHTML = "";
     for (i = 0; i < elements.length; i++)
-    document.getElementById("list").innerHTML += "<div class='element'>"+elements[i]+"</div>";
+    document.getElementById("list").innerHTML += "<div class='element'>"+elements[i]+"<input type='button' id='delete' value='delete' onclick='del("+i+")'></div>";
 } 
+function del(index){
+    elements.splice(index, 1);
+    display();
+} 
+ 
