@@ -1,8 +1,19 @@
 let elements = [];
+window.onload = function() {
+    if(JSON.parse(localStorage.getItem("shoppingList")) != null){
+        elements = JSON.parse(localStorage.getItem("shoppingList"));
+        display();
+    }
+}
 function addElement() {
     if(document.getElementById("input").value.trim() != ""){
         elements.push(document.getElementById("input").value.trim());
         document.getElementById("input").value = "";
+        if(localStorage.getItem("shoppingList") == null){
+            localStorage.setItem("shoppingList", JSON.stringify(elements));
+        }else {
+            localStorage.setItem("shoppingList", JSON.stringify(elements));
+        }
         display();
     }
 }
@@ -13,6 +24,11 @@ function display(){
 } 
 function del(index){
     elements.splice(index, 1);
+    if(localStorage.getItem("shoppingList") == null){
+        localStorage.setItem("shoppingList", JSON.stringify(elements));
+    }else {
+        localStorage.setItem("shoppingList", JSON.stringify(elements));
+    }
     display();
 } 
 function upd(index){
@@ -20,6 +36,11 @@ function upd(index){
     if (updateText != ""){
         elements[index] = updateText;
     } 
+    if(localStorage.getItem("shoppingList") == null){
+        localStorage.setItem("shoppingList", JSON.stringify(elements));
+    }else {
+        localStorage.setItem("shoppingList", JSON.stringify(elements));
+    }
     display();
 } 
 function strike(index){
@@ -27,5 +48,10 @@ function strike(index){
     elements[index] = elements[index].replace("<strike>","");
     elements[index] = elements[index].replace("</strike>","");
     }else elements[index] = "<strike>"+elements[index]+"</strike>";
+    if(localStorage.getItem("shoppingList") == null){
+        localStorage.setItem("shoppingList", JSON.stringify(elements));
+    }else {
+        localStorage.setItem("shoppingList", JSON.stringify(elements));
+    }
     display();
 }
