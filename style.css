@@ -75,3 +75,22 @@ input[type=button]:hover {
 strike {
     font-size: 3rem;
 }
+@media(max-width:460px)
+{
+    .element {
+        border-bottom: 0.5rem solid white;
+        border-radius: 10px;
+        font-size: 2rem;
+        display: flex;
+    }
+    strike {
+        font-size: 2rem;
+    }
+    #delete, #update, #done {
+    width: 4rem;
+    float: right;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    }
+
+}
