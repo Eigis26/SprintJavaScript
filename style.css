@@ -62,3 +62,8 @@ input[type=button]:hover {
     float: right;
     margin-top: 0.5rem;
 }
+#update {
+    width: 6rem;
+    float: right;
+    margin-top: 0.5rem;
+}
