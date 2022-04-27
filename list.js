@@ -33,6 +33,10 @@ function del(index){
 } 
 function upd(index){
     updateText = prompt("Let's update it!");
+    if (updateText.length >= 20) {
+        alert("Only 20 characters");
+        updateText = elements[index];
+    }
     if (updateText != ""){
         elements[index] = updateText;
     } 
